@@ -13,6 +13,14 @@
         h2 {
             color: #b60404;
         }
+        .btn-custom {
+        background-color: #b60404;
+        color: #fff;
+    }
+    .btn-custom:hover {
+        background-color: #a00303;
+        color: #fff;
+    }
 
         .card-header {
             background-color: #b60404;
@@ -79,7 +87,7 @@
                                 <form action="{{ url('/uang-masuk') }}" method="get">
                                     <div class="input-group">
                                         <input type="text" class="form-control" name="search" placeholder="Search Data Uang Masuk...">
-                                        <button class="btn btn-outline-dark" type="submit">
+                                        <button class="btn btn-custom" type="submit">
                                             <i class="bi bi-search"></i> Search
                                         </button>
                                     </div>

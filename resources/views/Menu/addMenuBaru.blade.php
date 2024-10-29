@@ -76,7 +76,7 @@
     <div class="col-md-8 offset-md-2 mt-5">
         <div class="card">
             <div class="card-header">
-                <h5 class="mb-0">Tambahin Menunya Yuk!!</h5>
+                <h5 class="mb-0">Tambah Menu Baru Yuk!</h5>
             </div>
             <div class="card-body">
                 @if(Session::has('msg'))
@@ -122,8 +122,8 @@
                                 @enderror
                             </div>
                             <button type="submit" class="btn btn-custom">Tambah <i class="bi bi-box-arrow-in-right"></i></button>
-                            <button type="reset" class="btn btn-outline-dark">Reset <i class="bi bi-arrow-clockwise"></i></button>
-                            <a href="{{ url('/menubaru') }}" class="btn btn-outline-dark">Batal</a>
+                            <button type="reset" class="btn btn-custom">Reset <i class="bi bi-arrow-clockwise"></i></button>
+                            <a href="{{ url('/list-menu') }}" class="btn btn-outline-dark">Batal</a>
                         </div>
                         <div class="col-md-6 text-center">
                             <div class="mb-3">

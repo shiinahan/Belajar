@@ -11,6 +11,14 @@
     h2 {
         color: #b60404;
     }
+    .btn-custom {
+        background-color: #b60404;
+        color: #fff;
+    }
+    .btn-custom:hover {
+        background-color: #a00303;
+        color: #fff;
+    }
     .card-header {
         background-color: #b60404;
         color: #ffffff;
@@ -55,7 +63,7 @@
                                 </div>
 
                                 <!--Ini button untuk mengirim login-->
-                                <button type="submit" class="btn btn-outline-dark">
+                                <button type="submit" class="btn btn-custom">
                                     <i class="bi bi-arrow-repeat"></i> Update
                                 </button>
                                 <a href="{{ url('/kategori') }}" class="btn btn-outline-dark">Batal</a>

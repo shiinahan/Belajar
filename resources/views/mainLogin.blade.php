@@ -120,7 +120,7 @@
             <nav class="nav flex-column">
                 <div class="container mt-3" style="padding-right: 50px">
                     <a class="head navbar-brand mt-3" href="#" style="color: #f6ebc5">
-                        <img src="{{ url('/assets/images/laravel.png') }}" height="60"> D 'Waroeng
+                        <img src="{{url ('assets/images/dwaroeng.png')}}" alt="dwaroeng logo" width="60" height="60"> D 'Waroeng
                     </a>
                     <h3 class="head m-3"></h3>
                 </div>

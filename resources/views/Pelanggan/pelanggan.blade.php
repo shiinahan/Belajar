@@ -13,6 +13,15 @@
     h2 {
         color: #b60404;
     }
+    .btn-custom {
+        background-color: #b60404;
+        color: #fff;
+    }
+    .btn-custom:hover {
+        background-color: #a00303;
+        color: #fff;
+    }
+
     .card-header {
         background-color: #b60404;
         color: #f6ebc5;
@@ -49,7 +58,7 @@
                     <div class="d-flex justify-content-end mb-3"> <!-- Tambahkan flexbox di sini -->
                         <form action="{{ url('/pelanggan') }}" method="get" class="d-flex">
                             <input type="text" class="form-control me-2" name="search" placeholder="Search Pelanggan ...">
-                            <button class="btn btn-outline-dark" type="submit">
+                            <button class="btn btn-custom" type="submit">
                                 <i class="bi bi-search"></i> Search
                             </button>
                         </form>

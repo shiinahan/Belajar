@@ -9,6 +9,14 @@
         .h2 {
             color: #b60404;
         }
+        .btn-custom {
+        background-color: #b60404;
+        color: #fff;
+    }
+    .btn-custom:hover {
+        background-color: #a00303;
+        color: #fff;
+    }
 
         .header-container {
             display: flex;
@@ -93,7 +101,7 @@
     <div class="container-fluid d-flex">
         <div class="content-area">
             <div class="header-container">
-                <h2 class="mb-0 ms-3">Rekap Pesanan</h2>
+                <h2 class="mb-0 ms-3" style="color: #b60404">Rekap Pesanan</h2>
                 <div class="total-pendapatan">
                     <div class="card">
                         <div class="card-body">
@@ -103,13 +111,11 @@
                     </div>
                 </div>
             </div>
-
             <div class="row">
                 <div class="main-panel">
                     <div class="content-wrapper">
                         <div class="page-header"></div>
                         <br><br>
-
                         <div class="row">
                             <div class="col col-md-10 offset-md-1 mt-5 grid-margin stretch-card">
                                 <div class="card">

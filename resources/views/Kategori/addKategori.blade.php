@@ -11,6 +11,14 @@
         h2 {
             color: #b60404;
         }
+        .btn-custom {
+        background-color: #b60404;
+        color: #fff;
+    }
+    .btn-custom:hover {
+        background-color: #a00303;
+        color: #fff;
+    }
         .card-header {
             background-color: #b60404;
             color: #f6ebc5;
@@ -55,10 +63,10 @@
                                 </div>
 
                                 <!--Ini button untuk menambah kategori-->
-                                <button type="submit" class="btn btn-outline-dark">
+                                <button type="submit" class="btn btn-custom">
                                     Tambah <i class="bi bi-box-arrow-in-right"></i>
                                 </button>
-                                <button type="reset" class="btn btn-outline-dark">
+                                <button type="reset" class="btn btn-custom">
                                     Reset <i class="bi bi-arrow-clockwise"></i>
                                 </button>
                                 </button>
