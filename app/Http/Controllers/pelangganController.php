@@ -12,9 +12,9 @@ class pelangganController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $getPelanggan = pesanan::orderBy('created_at', 'desc')->paginate();
+        $getPelanggan = pesanan::orderBy('created_at', 'desc')->where('namapelanggan', 'like', "%$request->search%")->paginate();
         return view('Pelanggan.pelanggan', compact('getPelanggan'));
     }
 

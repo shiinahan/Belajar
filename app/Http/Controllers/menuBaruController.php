@@ -86,7 +86,7 @@ class menuBaruController extends Controller
             'kategori' => 'required|exists:kategoris,id',
             'name' => 'required',
             'price' => 'required',
-            'photo' => 'mimes:png,jpg,jpeg',
+            'photo' => 'nullable|mimes:png,jpg,jpeg', // foto tidak wajib
         ], [
             'kategori.required' => 'Isi kategorinyaa!!',
             'name.required' => 'Isi namanyaa!!',
@@ -100,25 +100,29 @@ class menuBaruController extends Controller
 
         $old_photo = $saveMenu->photo;
 
-        if ($request->file('photo')) {
+        if ($request->hasFile('photo')) {
             $photo = $request->file('photo');
             $new_photo_name = uniqid() . "." . $photo->getClientOriginalExtension();
             $photo->move('assets/produkImages', $new_photo_name);
 
-            $saveMenu->photo = $new_photo_name;
-
-            if ($old_photo && file_exists(public_path('assets/produkImages' . $old_photo->photo))) {
-                unlink(public_path('assets/produkImages' . $old_photo->photo));
+            // Hapus foto lama jika ada
+            if ($old_photo && file_exists(public_path('assets/produkImages/' . $old_photo))) {
+                unlink(public_path('assets/produkImages/' . $old_photo));
             }
+
+            $saveMenu->photo = $new_photo_name; // Simpan nama foto baru
         }
 
         $saveMenu->save();
 
         return redirect('/list-menu')->with(
             'message',
-            'Menu : ' . $request->name . ', berhasil di perbaharui!!'
+            'Menu : ' . $request->name . ', berhasil diperbaharui!!'
         );
     }
+
+
+
 
     /**
      * Remove the specified resource from storage.
@@ -127,8 +131,8 @@ class menuBaruController extends Controller
     {
         $data = datamenu::find($id);
 
-        if ($data && file_exists(public_path('assets/produkImages' . $data->photo))){
-            unlink(public_path('assets/produkImages'. $data->photo));
+        if ($data && file_exists(public_path('assets/produkImages' . $data->photo))) {
+            unlink(public_path('assets/produkImages' . $data->photo));
         }
 
         $data->delete();

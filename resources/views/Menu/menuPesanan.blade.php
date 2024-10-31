@@ -14,14 +14,16 @@
         h2 {
             color: #b60404;
         }
+
         .btn-custom {
-        background-color: #b60404;
-        color: #fff;
-    }
-    .btn-custom:hover {
-        background-color: #a00303;
-        color: #fff;
-    }
+            background-color: #b60404;
+            color: #fff;
+        }
+
+        .btn-custom:hover {
+            background-color: #a00303;
+            color: #fff;
+        }
 
         .card-header {
             background-color: #b60404;
@@ -31,6 +33,37 @@
         .card-body {
             background-color: #FFF0D1;
             color: #b60404;
+        }
+
+        /* Search Container Styling */
+        .search-container {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+            border-radius: 25px;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .search-container:hover {
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Styling untuk search input */
+        .search-input {
+            border: none;
+            border-radius: 25px 0 0 25px;
+            box-shadow: none;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .search-input:focus {
+            box-shadow: 0px 0px 8px rgba(73, 54, 40, 0.5);
+            transform: scale(1.02);
+        }
+
+        /* Styling untuk search button */
+        .search-button {
+            border: none;
+            border-radius: 0 25px 25px 0;
         }
     </style>
     <div class="container-fluid pt-3 mb-3">
@@ -67,10 +100,9 @@
                 <div class="row d-flex justify-content-end">
                     <div class="col-4 mt-4 mb-4">
                         <form action="{{ url('/menu-pesanan') }}" method="get">
-                            <div class="input-group">
-                                <input type="text" class="form-control" name="search"
-                                    placeholder="Search Pesanan ...">
-                                <button class="btn btn-custom" type="submit">
+                            <div class="input-group search-container">
+                                <input type="text" class="form-control search-input" name="search" placeholder="Cari ...">
+                                <button class="btn btn-outline-dark search-button" type="submit">
                                     <i class="bi bi-search"></i> Search
                                 </button>
                             </div>

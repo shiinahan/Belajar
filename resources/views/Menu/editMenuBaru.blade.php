@@ -123,9 +123,10 @@ h2 {
                             <div class="col-md-6 text-center">
                                 <label for="current-photo" class="form-label">Current Photo</label>
                                 <div class="mt-2 mb-3">
-                                    <img src="{{ url('assets/produkImages', $data->photo) }}" alt="Current Product Image" class="img-fluid rounded" style="max-height: 250px;">
+                                    <img src="{{ url('assets/produkImages/' . ($data->photo ?? 'default.jpg')) }}" alt="Current Product Image" class="img-fluid rounded" style="max-height: 250px;">
                                 </div>
                             </div>
+
                         </div>
 
                         <div class="d-flex justify-content-between">

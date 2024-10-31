@@ -71,7 +71,7 @@ Route::middleware(['auth'])->group(function () {
 
         Route::get('/kategori/edit/{id}', 'edit');
         Route::post('/kategori/edit/{id}', 'update');
-        Route::get('/kategori/delete/{id}', 'destroy');
+        Route::get('/kategori/{id}', 'destroy');
     });
     Route::controller(pelangganController::class)->group(function () {
         Route::get('/pelanggan', 'index');
@@ -85,7 +85,7 @@ Route::middleware(['auth'])->group(function () {
     });
     Route::controller(uangMasukController::class)->group(function () {
         Route::get('/uang-masuk', 'index');
-        Route::get('/uang-masukp/export/excel', 'export');
+        Route::get('/uang-masuk/export/excel', 'export');
         // Route::post('/uang-masuk', 'store');
     });
 

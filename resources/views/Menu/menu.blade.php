@@ -8,6 +8,22 @@
         .card {
             background-color: #b60404;
             color: #f6ebc5;
+            transition: transform 0.3s ease;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-img-top {
+            border-radius: 15px; /* Membulatkan sudut gambar */
+            transition: transform 0.3s ease; /* Tambahkan efek transisi pada gambar */
+        }
+
+        .card-img-top:hover {
+            transform: scale(1.05); /* Efek zoom pada gambar saat hover */
         }
 
         .container {
@@ -83,6 +99,7 @@
                 font-size: 1.5rem;
             }
         }
+
         .footer {
             background-color: #b60404;
             color: #f6ebc5;

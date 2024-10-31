@@ -143,6 +143,32 @@
         .footer a:hover {
             color: #ffffff;
         }
+
+        .rounded-image {
+            border-radius: 20px;
+        }
+
+        .testimonial-card {
+            background-color: #b60404;
+            color: #f6ebc5;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            /* Mengangkat sedikit saat di-hover */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            /* Meningkatkan shadow */
+        }
+
+        header {
+            padding: 20px 0;
+            /* Memberikan ruang vertikal di atas dan bawah gambar */
+        }
     </style>
 
     <!-- Include Animate.css -->
@@ -150,10 +176,9 @@
 
     <div class="container-fluid">
         <header class="text-center mb-4">
-            <img src="{{ url('assets/images/lendingpej.jpg') }}" class="img-fluid" alt="Lending Pej Image">
-            {{-- <h1>Welcome to D'Waroeng!</h1>
-            <p>Your favorite culinary destination</p> --}}
+            <img src="{{ url('assets/images/lendingpej.jpg') }}" class="img-fluid rounded-image" alt="Lending Pej Image">
         </header>
+
     </div>
     <main class="container-fluid mt-4">
         <div class="row my-3">

@@ -4,7 +4,6 @@
 
 <head>
     <meta charset="utf-8">
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title')</title>
     <!-- Bootstrap Assets CSS -->
@@ -24,8 +23,15 @@
             background-color: #f6ebc5;
         }
 
+        .side {
+            transition: background-color 0.3s ease, transform 0.3s ease, border-radius 0.3s ease; /* Tambahkan efek transisi */
+            border-radius: 0; /* Sudut awal tidak membulat */
+        }
+
         .side:hover {
             background-color: #800000;
+            transform: scale(1.05); /* Efek zoom saat hover */
+            border-radius: 10px; /* Sudut membulat saat hover */
         }
 
         .navbar {
@@ -36,6 +42,11 @@
             margin-left: 20px;
             font-size: 25px;
             font-weight: 600;
+            transition: transform 0.3s ease; /* Animasi transformasi */
+        }
+
+        .navbar-brand:hover {
+            transform: scale(1.1); /* Efek zoom saat hover pada logo dan teks */
         }
 
         .clr {
@@ -169,7 +180,7 @@
 
                 {{-- Menu Logout --}}
                 <a href="{{ url('/logout') }}" class="px-1 side nav-item nav-link mt-4" style="color: #f6ebc5">
-                    <i class="bi bi-power    mx-2"></i> Logout
+                    <i class="bi bi-power mx-2"></i> Logout
                 </a>
             </nav>
         </div>

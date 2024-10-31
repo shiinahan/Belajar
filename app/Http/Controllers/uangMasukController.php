@@ -12,9 +12,9 @@ class uangMasukController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $getUang = pesanan::orderBy('created_at', 'desc')->paginate();
+        $getUang = pesanan::orderBy('created_at', 'desc')->where('tgl', 'like', "%$request->search%")->paginate();
         $getTotalUang = pesanan::sum('harga');
 
         return view('uangMasuk.uangMasuk', compact('getUang', 'getTotalUang'));

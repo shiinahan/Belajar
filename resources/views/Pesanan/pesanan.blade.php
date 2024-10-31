@@ -9,14 +9,16 @@
         .h2 {
             color: #b60404;
         }
+
         .btn-custom {
-        background-color: #b60404;
-        color: #fff;
-    }
-    .btn-custom:hover {
-        background-color: #a00303;
-        color: #fff;
-    }
+            background-color: #b60404;
+            color: #fff;
+        }
+
+        .btn-custom:hover {
+            background-color: #a00303;
+            color: #fff;
+        }
 
         .header-container {
             display: flex;
@@ -96,6 +98,7 @@
         .custom-icon-size {
             font-size: 30px;
         }
+        
     </style>
 
     <div class="container-fluid d-flex">

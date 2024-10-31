@@ -10,9 +10,9 @@ class menuPesananController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $getPesanan = pesanan::orderBy('created_at', 'desc')->paginate();
+        $getPesanan = pesanan::orderBy('created_at', 'desc')->where('tgl', 'like', "%$request->search%")->paginate();
 
         return view('Menu.menuPesanan', compact('getPesanan'));
     }
